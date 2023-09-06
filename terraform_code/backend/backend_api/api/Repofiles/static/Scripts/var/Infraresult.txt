@@ -1,0 +1,9 @@
+[1mProject:[0m D:\changes\infracost\api\Repofiles\static\Scripts\var
+
+ [4mName[0m  [4mMonthly Qty[0m  [4mUnit[0m  [4mMonthly Cost[0m 
+                                       
+[1m OVERALL TOTAL[0m                   $0.00 
+──────────────────────────────────
+1 cloud resource was detected:
+∙ 0 were estimated
+∙ 1 was free, rerun with --show-skipped to see details

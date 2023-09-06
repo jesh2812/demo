@@ -1,0 +1,37 @@
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  #language{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    color:rgb(10, 10, 10);
+    background-color: white;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+  
+  .input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .textarea {
+    width: 45%;
+  }
+
+  .chakra-modal__body input{
+    background-color: white !important;
+  }

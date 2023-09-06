@@ -1,0 +1,34 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_cloudwatch_log_destination": {
+                "Test_GM1 service name": {
+                    "name": "name",
+                    "role_arn": "role_arn",
+                    "target_arn": "target_arn"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_amplify_webhook": {
+                "amplify_mod1": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_cognito_identity_pool_roles_attachment": {
+                "cI001": {}
+            }
+        }
+    }
+]

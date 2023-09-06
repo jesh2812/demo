@@ -1,0 +1,100 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_default_security_group": {
+                "aws_default_security_group": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_vpc": {
+                "vpc001": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket": {
+                "s3001": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_public_access_block": {
+                "bucket_access": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_kms_key": {
+                "mykey": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_server_side_encryption_configuration": {
+                "example": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_logging": {
+                "log001": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_versioning": {
+                "ve1001": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_lifecycle_configuration": {
+                "lcon001": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_cloudwatch_metric_alarm": {
+                "hello_cloudwatch": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_cloudtrail": {
+                "ct012": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_chime_voice_connector_streaming": {
+                "c123": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_batch_job_queue": {
+                "batchsn001": {}
+            }
+        }
+    }
+]

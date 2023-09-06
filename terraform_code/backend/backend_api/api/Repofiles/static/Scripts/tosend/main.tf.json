@@ -1,0 +1,167 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_subnet": {
+                "subnet001": {
+                    "cidr_block": "10.1.0.0/24",
+                    "vpc_id": "${aws_vpc.vpc001.id}"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_route_table": {
+                "route001": {
+                    "vpc_id": "${aws_vpc.vpc001.id}"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_default_security_group": {
+                "secgrp001": {
+                    "vpc_id": "${aws_vpc.vpc001.id}"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_vpc": {
+                "vpc001": {
+                    "cidr_block": "10.1.0.0/16"
+                }
+            }
+        }
+    },
+
+    {
+        "resource": {
+            "aws_instance": {
+                "ec2test": {
+                    "ami": "ami-05afd67c4a44cc983",
+                    "instance_type": "t2.micro",
+                    "metadata_options": {
+                        "http_endpoint": "enabled",
+                        "http_tokens": "required"
+                    },
+                    "monitoring": "true",
+                    "root_block_device": {
+                        "encrypted": "true"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket": {
+                "s3001": {
+                    "bucket": "awsbucket30012452"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_public_access_block": {
+                "bucket_access": {
+                    "bucket": "${aws_s3_bucket.s3001.id}",
+                    "block_public_acls": "true",
+                    "block_public_policy": "true",
+                    "ignore_public_acls": "true",
+                    "restrict_public_buckets": "true"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_kms_key": {
+                "mykey": {
+                    "description": "This key is used to encrypt bucket objects",
+                    "deletion_window_in_days": 10,
+                    "enable_key_rotation": "true"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_s3_bucket_server_side_encryption_configuration": {
+                "example": {
+                    "bucket": "${aws_s3_bucket.s3001.id}",
+                    "rule": [
+                        {
+                            "apply_server_side_encryption_by_default": {
+                                "kms_master_key_id": "${aws_kms_key.mykey.arn}",
+                                "sse_algorithm": "aws:kms"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+  "resource": {
+    "aws_s3_bucket_versioning": {
+      "ve1001": {
+        "bucket": "${aws_s3_bucket.s3001.id}",
+        "versioning_configuration": {
+          "status": "Enabled"
+        }
+      }
+    }
+  }
+},
+    {
+  "resource": {
+    "aws_s3_bucket_logging": {
+      "log001": {
+        "bucket": "${aws_s3_bucket.s3001.id}",
+        "target_bucket": "tests3check",
+        "target_prefix": "log/"
+      }
+    }
+  }
+},
+    {
+  "resource": {
+    "aws_s3_bucket_lifecycle_configuration": {
+      "lcon001": {
+        "bucket": "${aws_s3_bucket.s3001.id}",
+        "rule": [
+          {
+            "id": "quarterly_retention",
+            "filter": {
+              "prefix": "folder/"
+            },
+            "expiration": {
+              "days": 92
+            },
+            "status": "Enabled"
+          }
+        ]
+      }
+    }
+  }
+}
+  
+
+
+
+
+
+
+
+]

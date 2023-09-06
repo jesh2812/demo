@@ -1,0 +1,1991 @@
+[
+    {"version":"Version3.63.0"},
+{
+    "Module": "Cloud Functions",
+    "Resource": "google_cloudfunctions_function",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "runtime",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "description",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "available-memory-mb",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "timeout",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "entry-point",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "event-trigger",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "event-type",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "resource",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "failure-policy",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "retry",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "trigger-http",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "https-trigger-security-level",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "ingress-settings",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "labels",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "service-account-email",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "environment-variables",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "build-environment-variables",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "vpc-connector",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "vpc-connector-egress-settings",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "source-archive-bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "source-archive-object",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "source-repository",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "url",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "docker-registry",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "docker-repository",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "kms-key-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "max-instances",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "min-instances",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "secret-environment-variables",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "key",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "project-id",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "secret",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "version",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "secret-volumes",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "mount-path",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "project-id",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "secret",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "versions",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "path",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "version",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Functions",
+    "Resource": "google_cloudfunctions_function_iam",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "cloud-function",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "region",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "member/members",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": [
+        {
+            "Attribute_Name": "etag",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        }
+    ]
+}
+,{
+    "Module": "Cloud IAM",
+    "Resource": "google_iam_deny_policy",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "parent",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "rules",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "description",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "deny-rule",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "denied-principals",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "exception-principals",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "denied-permissions",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "exception-permissions",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "denial-condition",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": "",
+                            "Child_Arguments": [
+                                {
+                                    "Argument_Name": "expression",
+                                    "Argument_DataType": "",
+                                    "Argument_Optional": "False",
+                                    "Argument_Default_Value": ""
+                                },
+                                {
+                                    "Argument_Name": "title",
+                                    "Argument_DataType": "",
+                                    "Argument_Optional": "True",
+                                    "Argument_Default_Value": ""
+                                },
+                                {
+                                    "Argument_Name": "description",
+                                    "Argument_DataType": "",
+                                    "Argument_Optional": "True",
+                                    "Argument_Default_Value": ""
+                                },
+                                {
+                                    "Argument_Name": "location",
+                                    "Argument_DataType": "",
+                                    "Argument_Optional": "True",
+                                    "Argument_Default_Value": ""
+                                },
+                                {
+                                    "Argument_Name": "display-name",
+                                    "Argument_DataType": "",
+                                    "Argument_Optional": "True",
+                                    "Argument_Default_Value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud IAM",
+    "Resource": "google_iam_workload_identity_pool",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "workload-identity-pool-id",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "display-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "description",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "disabled",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud IAM",
+    "Resource": "google_iam_workload_identity_pool_provider",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "workload-identity-pool-id",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "workload-identity-pool-provider-id",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "display-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "description",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "disabled",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "attribute-mapping",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "attribute-condition",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "aws",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "account-id",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "oidc",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "allowed-audiences",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "issuer-uri",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+}
+,{
+    "Module": "Cloud SQL",
+    "Resource": "google_sql_database",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "instance",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "charset",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "collation",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud SQL",
+    "Resource": "google_sql_database_instance",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "region",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "settings",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "tier",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "activation-policy",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "availability-type",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "collation",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "pricing-plan",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "user-labels",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "name",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "value",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "database-version",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "master-instance-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "replica-configuration",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "root-password",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "encryption-key-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "restore-backup-context",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "backup-run-id",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "instance-id",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "project",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "clone",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "source-instance-name",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "point-in-time",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "allocated-ip-range",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        }
+    ],
+    "Attribute_Reference": [
+        {
+            "Attribute_Name": "public-ip-address",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "private-ip-address",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        }
+    ]
+},
+{
+    "Module": "Cloud SQL",
+    "Resource": "google_sql_source_representation_instance",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "database-version",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "host",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "region",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "port",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud SQL",
+    "Resource": "google_sql_ssl_cert",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "instance",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "common-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud SQL",
+    "Resource": "google_sql_user",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "instance",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "password",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "type",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "deletion-policy",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "host",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+}
+,{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_bucket",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "location",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "lifecycle-rule",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "action",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "condition",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "age",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "created-before",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "with-state",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "matches-storage-class",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "matches-prefix",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "matches-suffix",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "num-newer-versions",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "custom-time-before",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "days-since-custom-time",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "days-since-noncurrent-time",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "noncurrent-time-before",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "versioning",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "enabled",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "website",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "main-page-suffix",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "not-found-page",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "cors",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "origin",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "method",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "response-header",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "max-age-seconds",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "default-event-based-hold",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "retention-policy",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "is-locked",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "retention-period",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "labels",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "logging",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "log-bucket",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "encryption",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_bucket_access_control",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "entity",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_bucket_acl",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "predefined-acl",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role-entity",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "default-acl",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_bucket_iam",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "member/members",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": [
+        {
+            "Attribute_Name": "etag",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        }
+    ]
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_bucket_object",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "metadata",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "source",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "cache-control",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "content-disposition",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "content-encoding",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "content-language",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "content-type",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "customer-encryption",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "encryption-algorithm",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "encryption-key",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "storage-class",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "kms-key-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": [
+        {
+            "Attribute_Name": "crc32c",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "md5hash",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "self-link",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "output-name",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "media-link",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        }
+    ]
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_default_object_access_control",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "entity",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "object",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": [
+        {
+            "Attribute_Name": "project-number",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "team",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        }
+    ]
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_default_object_acl",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role-entity",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_hmac_key",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "service-account-email",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "state",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_notification",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "payload-format",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "topic",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "custom-attributes",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "event-types",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "object-name-prefix",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_object_access_control",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "entity",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "object",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": [
+        {
+            "Attribute_Name": "project-number",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        },
+        {
+            "Attribute_Name": "team",
+            "Attribute_DataType": "",
+            "Attribute_Optional": "True",
+            "Attribute_Default_Value": ""
+        }
+    ]
+},
+{
+    "Module": "Cloud Storage",
+    "Resource": "google_storage_object_acl",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "bucket",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "object",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "predefined-acl",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "role-entity",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+}
+,{
+    "Module": "Cloud DNS",
+    "Resource": "google_dns_managed_zone",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "dns-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "description",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "dnssec-config",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "kind",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "non-existence",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "state",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": ""
+                },
+                {
+                    "Argument_Name": "default-key-specs",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "algorithm",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "key-length",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "key-type",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "kind",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "labels",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "visibility",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "private-visibility-config",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "networks",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "network-url",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "forwarding-config",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "target-name-servers",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "ipv4-address",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "forwarding-path",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "peering-config",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "target-network",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "network-url",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "force-destroy",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud DNS",
+    "Resource": "google_dns_policy",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "alternative-name-server-config",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "target-name-servers",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "ipv4-address",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "forwarding-path",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "description",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "enable-inbound-forwarding",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "enable-logging",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "networks",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "network-url",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud DNS",
+    "Resource": "google_dns_record_set",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "managed-zone",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "type",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "rrdatas",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "routing-policy",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "wrr",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "weight",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "rrdatas",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                },
+                {
+                    "Argument_Name": "geo",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "True",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "location",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "rrdatas",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "ttl",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud DNS",
+    "Resource": "google_dns_response_policy",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "response-policy-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "description",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "networks",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "network-url",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": ""
+                }
+            ]
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+},
+{
+    "Module": "Cloud DNS",
+    "Resource": "google_dns_response_policy_rule",
+    "Argument_Reference": [
+        {
+            "Argument_Name": "rule-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "dns-name",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "response-policy",
+            "Argument_DataType": "",
+            "Argument_Optional": "False",
+            "Argument_Default_Value": ""
+        },
+        {
+            "Argument_Name": "local-data",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": "",
+            "Child_Arguments": [
+                {
+                    "Argument_Name": "local-datas",
+                    "Argument_DataType": "",
+                    "Argument_Optional": "False",
+                    "Argument_Default_Value": "",
+                    "Child_Arguments": [
+                        {
+                            "Argument_Name": "name",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "type",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "False",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "ttl",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        },
+                        {
+                            "Argument_Name": "rrdatas",
+                            "Argument_DataType": "",
+                            "Argument_Optional": "True",
+                            "Argument_Default_Value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Argument_Name": "project",
+            "Argument_DataType": "",
+            "Argument_Optional": "True",
+            "Argument_Default_Value": ""
+        }
+    ],
+    "Attribute_Reference": []
+}
+]

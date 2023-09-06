@@ -1,0 +1,56 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_account": {
+                "ser1": {
+                    "admin_name": "1",
+                    "edition": "2",
+                    "email": "3",
+                    "name": "4"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_external_function": {
+                "sd": {
+                    "api_integration": "a",
+                    "database": "b",
+                    "name": "c",
+                    "return_behavior": "d",
+                    "return_type": "e",
+                    "schema": "f",
+                    "url_of_proxy_and_resource": "g"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_external_table": {
+                "cs": {
+                    "column": {
+                        "as": [
+                            "djh",
+                            "cjj"
+                        ],
+                        "name": "df",
+                        "type": "fv"
+                    },
+                    "file_format": "df",
+                    "location": "vf",
+                    "name": "sd",
+                    "schema": "sdvc"
+                }
+            }
+        }
+    }
+]

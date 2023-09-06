@@ -1,0 +1,43 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_api_gateway_authorizer": {
+                "srhh": {
+                    "name": "eg",
+                    "rest_api_id": "shf",
+                    "authorizer_uri": "srhj"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_appflow_connector_profile": {
+                "egh": {
+                    "connection_mode": "rhr",
+                    "connector_profile_config": "rhr",
+                    "connector_type": "rhrh"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_ami": {
+                "erh": {
+                    "image_location": "rhtj",
+                    "kernel_id": "etajt",
+                    "device_name": "ta",
+                    "virtual_name": "jtt"
+                }
+            }
+        }
+    }
+]

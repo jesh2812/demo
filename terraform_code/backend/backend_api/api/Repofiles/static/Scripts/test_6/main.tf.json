@@ -1,0 +1,22 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate": {
+                "ser1": {
+                    "domain_name": "a",
+                    "validation_method": "a",
+                    "private_key": "a",
+                    "certificate_body": "a",
+                    "certificate_authority_arn": "a"
+                }
+            }
+        }
+    }
+]

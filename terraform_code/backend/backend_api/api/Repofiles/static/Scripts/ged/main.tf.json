@@ -1,0 +1,46 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate": {
+                "ft": {
+                    "domain_name": "dj",
+                    "validation_method": "dh",
+                    "private_key": "dh",
+                    "certificate_body": "dh",
+                    "certificate_authority_arn": "dt"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_athena_data_catalog": {
+                "gcn": {
+                    "name": "gj",
+                    "type": "gfn",
+                    "parameters": "gcfn",
+                    "description": "fgtn"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_ami": {
+                "gdjer": {
+                    "image_location": "dh",
+                    "kernel_id": "dhb",
+                    "device_name": "drh",
+                    "virtual_name": "hrd"
+                }
+            }
+        }
+    }
+]

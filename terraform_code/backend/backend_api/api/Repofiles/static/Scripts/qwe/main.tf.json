@@ -1,0 +1,48 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_table_column_masking_policy_application": {
+                "ser1": {
+                    "column": [
+                        "hd",
+                        "jhd"
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_database_role": {
+                "sd": {
+                    "name": "cjhd"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_external_table": {
+                "scs": {
+                    "column": {
+                        "as": "sd",
+                        "name": "as",
+                        "type": "vfds"
+                    },
+                    "database": "fds",
+                    "file_format": "dcvds",
+                    "location": "fs",
+                    "name": "xc",
+                    "schema": "vs"
+                }
+            }
+        }
+    }
+]

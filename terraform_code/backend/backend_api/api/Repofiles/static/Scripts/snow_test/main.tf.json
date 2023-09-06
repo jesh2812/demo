@@ -1,0 +1,21 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "snowflake_account": {
+                "sd": {
+                    "admin_name": "df",
+                    "edition": "sf",
+                    "email": "fbs",
+                    "name": "vsz"
+                }
+            }
+        }
+    }
+]

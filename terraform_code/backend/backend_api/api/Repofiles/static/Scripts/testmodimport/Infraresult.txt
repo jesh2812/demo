@@ -1,0 +1,23 @@
+[1mProject:[0m D:\changes\infracost\api\Repofiles\static\Scripts\testmodimport
+
+ [4mName[0m                             [4mMonthly Qty[0m  [4mUnit[0m                [4mMonthly Cost[0m 
+                                                                                
+ [1maws_backup_vault.mod2backup[0m                                                    
+ [2m├─[0m EFS backup (warm)         Monthly cost depends on usage: $0.055 per GB      
+ [2m├─[0m EFS backup (cold)         Monthly cost depends on usage: $0.011 per GB      
+ [2m├─[0m EFS restore (warm)        Monthly cost depends on usage: $0.022 per GB      
+ [2m├─[0m EFS restore (cold)        Monthly cost depends on usage: $0.033 per GB      
+ [2m├─[0m EFS restore (item-level)  Monthly cost depends on usage: $0.55 per requests 
+ [2m├─[0m EBS snapshot              Monthly cost depends on usage: $0.05 per GB       
+ [2m├─[0m RDS snapshot              Monthly cost depends on usage: $0.095 per GB      
+ [2m├─[0m DynamoDB backup           Monthly cost depends on usage: $0.11 per GB       
+ [2m├─[0m DynamoDB restore          Monthly cost depends on usage: $0.17 per GB       
+ [2m├─[0m Aurora snapshot           Monthly cost depends on usage: $0.023 per GB      
+ [2m├─[0m FSx for Windows backup    Monthly cost depends on usage: $0.05 per GB       
+ [2m└─[0m FSx for Lustre backup     Monthly cost depends on usage: $0.05 per GB       
+                                                                                
+[1m OVERALL TOTAL[0m                                                            $0.00 
+──────────────────────────────────
+4 cloud resources were detected:
+∙ 1 was estimated, it includes usage-based costs, see [4mhttps://infracost.io/usage-file[0m
+∙ 3 are not supported yet, rerun with --show-skipped to see details

@@ -1,0 +1,48 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_ami": {
+                "sd": {
+                    "name": "wd",
+                    "image_location": "sds",
+                    "kernel_id": "wd",
+                    "device_name": "d",
+                    "virtual_name": "wsd",
+                    "deprecation_time": "dc",
+                    "boot_mode": "wsw",
+                    "ena_support": "de",
+                    "virtualization_type": "ded",
+                    "architecture": "wd",
+                    "volume_type": "dew"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_emr_cluster": {
+                "cs": {
+                    "name": [
+                        "dj",
+                        "djk"
+                    ],
+                    "release_label": "jdhg",
+                    "service_role": "jhdg",
+                    "master_instance_group": {
+                        "bid_price": "[\"kdj\",\"djjdh\"]",
+                        "instance_count": "kfbbf",
+                        "instance_type": "bd",
+                        "name": "kjbde"
+                    }
+                }
+            }
+        }
+    }
+]

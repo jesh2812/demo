@@ -1,0 +1,58 @@
+/* UserList.css */
+.user-list-container {
+  margin: 20px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.addUserHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-user-button {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-user-button:hover {
+  background-color: #245ea3;
+}
+
+.user-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-list th,
+.user-list td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Alternating row background colors */
+.user-list tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.user-list tbody tr:hover {
+  background-color: #edf2f7;
+}
+
+/* Styling for links inside table cells */
+.user-list a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.user-list a:hover {
+  text-decoration: underline;
+}

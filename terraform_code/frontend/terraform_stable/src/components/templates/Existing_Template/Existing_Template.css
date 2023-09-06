@@ -1,0 +1,43 @@
+.provider-card-section {
+  justify-content: center;
+}
+
+.modules-span {
+  padding: 2px 8px 2px 8px;
+  border: 1px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-left: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  cursor: pointer;
+}
+.modules-span {
+  transition: transform 0.2s ease-in-out;
+}
+
+.modules-span:hover {
+  transform: scale(1.1);
+}
+
+.total-icon-span {
+  position: absolute;
+}
+
+#add-btn {
+  margin-top: 10px;
+  padding: 8px 13px 8px 13px !important;
+  height: max-content;
+  margin-top: 12px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  font-weight: 600;
+}
+
+.gcp-span {
+  background-color: #fefefe !important;
+  color: white;
+  border-radius: 18px;
+  padding: 4px;
+  box-shadow: 0px 0px 3px rgb(0 0 0 / 0.2);
+}
+

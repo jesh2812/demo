@@ -1,0 +1,273 @@
+
+
+       _               _              
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V / 
+  \___|_| |_|\___|\___|_|\_\___/ \_/  
+                                      
+By bridgecrew.io | version: 2.3.192 
+Update available 2.3.192 -> 2.3.287
+Run pip3 install -U checkov to update 
+
+
+terraform scan results:
+
+Passed checks: 19, Failed checks: 10, Skipped checks: 0
+
+Check: CKV_AWS_274: "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy"
+	PASSED for resource: aws_iam_role.km_ecs_task_execution_role
+	File: /main.tf:10-32
+Check: CKV_AWS_61: "Ensure AWS IAM policy does not allow assume role permission across all services"
+	PASSED for resource: aws_iam_role.km_ecs_task_execution_role
+	File: /main.tf:10-32
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_45
+Check: CKV_AWS_60: "Ensure IAM role allows only specific services or principals to assume it"
+	PASSED for resource: aws_iam_role.km_ecs_task_execution_role
+	File: /main.tf:10-32
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_44
+Check: CKV_AWS_62: "Ensure IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+	Guide: https://docs.bridgecrew.io/docs/iam_47
+Check: CKV_AWS_287: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+Check: CKV_AWS_289: "Ensure IAM policies does not allow permissions management / resource exposure without constraints"
+	PASSED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+Check: CKV_AWS_286: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+Check: CKV_AWS_63: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+	Guide: https://docs.bridgecrew.io/docs/iam_48
+Check: CKV_AWS_274: "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy"
+	PASSED for resource: aws_iam_role_policy_attachment.km_ecs_task_exec_role_policy_attach
+	File: /main.tf:63-66
+Check: CKV_AWS_274: "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy"
+	PASSED for resource: aws_iam_role_policy_attachment.km_ssm_secrets_policy_policy_attach
+	File: /main.tf:68-71
+Check: CKV_AWS_223: "Ensure ECS Cluster enables logging of ECS Exec"
+	PASSED for resource: aws_ecs_cluster.km_ecs_cluster
+	File: /main.tf:73-79
+	Guide: https://docs.bridgecrew.io/docs/ensure-aws-ecs-cluster-enables-logging-of-ecs-exec
+Check: CKV_AWS_97: "Ensure Encryption in transit is enabled for EFS volumes in ECS Task definitions"
+	PASSED for resource: aws_ecs_task_definition.km_ecs_task
+	File: /main.tf:81-92
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_general_39
+Check: CKV_AWS_249: "Ensure that the Execution Role ARN and the Task Role ARN are different in ECS Task definitions"
+	PASSED for resource: aws_ecs_task_definition.km_ecs_task
+	File: /main.tf:81-92
+	Guide: https://docs.bridgecrew.io/docs/ensure-aws-appsync-has-field-level-logs-enabled
+Check: CKV_AWS_332: "Ensure ECS Fargate services run on the latest Fargate platform version"
+	PASSED for resource: aws_ecs_service.km_ecs_service
+	File: /main.tf:94-113
+Check: CKV_AWS_66: "Ensure that CloudWatch Log Group specifies retention days"
+	PASSED for resource: aws_cloudwatch_log_group.km_log_group
+	File: /main.tf:115-122
+	Guide: https://docs.bridgecrew.io/docs/logging_13
+Check: CKV_AWS_46: "Ensure no hard-coded secrets exist in EC2 user data"
+	PASSED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_secrets_1
+Check: CKV_AWS_88: "EC2 instance should not have public IP."
+	PASSED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/public_12
+Check: CKV2_AWS_56: "Ensure AWS Managed IAMFullAccess IAM policy is not used."
+	PASSED for resource: aws_iam_role_policy_attachment.km_ecs_task_exec_role_policy_attach
+	File: /main.tf:63-66
+Check: CKV2_AWS_40: "Ensure AWS IAM policy does not allow full IAM privileges"
+	PASSED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+Check: CKV_AWS_288: "Ensure IAM policies does not allow data exfiltration"
+	FAILED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+
+		34 | resource "aws_iam_policy" "km_ssm_secrets_policy" {
+		35 |   name        = "km_ssm_secrets_policy_${var.environment}"
+		36 |   description = "Kai Monkey SSM Secrets Policy"
+		37 | 
+		38 |   policy = <<EOF
+		39 | {
+		40 |     "Version": "2012-10-17",
+		41 |     "Statement": [
+		42 |         {
+		43 |             "Sid": "KaiMonkeySSMSecretsPolicyGet",
+		44 |             "Effect": "Allow",
+		45 |             "Action": "secretsmanager:GetSecretValue",
+		46 |             "Resource": "*"
+		47 |         },
+		48 |         {
+		49 |             "Sid": "KaiMonkeySSMSecretsPolicyGetDecrypt",
+		50 |             "Effect": "Allow",
+		51 |             "Action": [
+		52 |                 "kms:Decrypt",
+		53 |                 "ssm:GetParameters",
+		54 |                 "ssm:GetParameter"
+		55 |             ],
+		56 |             "Resource": "*"
+		57 |         }
+		58 |     ]
+		59 | }
+		60 | EOF
+		61 | }
+
+Check: CKV_AWS_290: "Ensure IAM policies does not allow write access without constraints"
+	FAILED for resource: aws_iam_policy.km_ssm_secrets_policy
+	File: /main.tf:34-61
+
+		34 | resource "aws_iam_policy" "km_ssm_secrets_policy" {
+		35 |   name        = "km_ssm_secrets_policy_${var.environment}"
+		36 |   description = "Kai Monkey SSM Secrets Policy"
+		37 | 
+		38 |   policy = <<EOF
+		39 | {
+		40 |     "Version": "2012-10-17",
+		41 |     "Statement": [
+		42 |         {
+		43 |             "Sid": "KaiMonkeySSMSecretsPolicyGet",
+		44 |             "Effect": "Allow",
+		45 |             "Action": "secretsmanager:GetSecretValue",
+		46 |             "Resource": "*"
+		47 |         },
+		48 |         {
+		49 |             "Sid": "KaiMonkeySSMSecretsPolicyGetDecrypt",
+		50 |             "Effect": "Allow",
+		51 |             "Action": [
+		52 |                 "kms:Decrypt",
+		53 |                 "ssm:GetParameters",
+		54 |                 "ssm:GetParameter"
+		55 |             ],
+		56 |             "Resource": "*"
+		57 |         }
+		58 |     ]
+		59 | }
+		60 | EOF
+		61 | }
+
+Check: CKV_AWS_65: "Ensure container insights are enabled on ECS cluster"
+	FAILED for resource: aws_ecs_cluster.km_ecs_cluster
+	File: /main.tf:73-79
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_logging_11
+
+		73 | resource "aws_ecs_cluster" "km_ecs_cluster" {
+		74 |   name = "km_ecs_cluster-${var.environment}"
+		75 | 
+		76 |   tags = merge(var.default_tags, {
+		77 |     Name = "km_ecs_cluster_${var.environment}"
+		78 |   })
+		79 | }
+
+Check: CKV_AWS_333: "Ensure ECS services do not have public IP addresses assigned to them automatically"
+	FAILED for resource: aws_ecs_service.km_ecs_service
+	File: /main.tf:94-113
+
+		94  | resource "aws_ecs_service" "km_ecs_service" {
+		95  |   name            = "km_ecs_service_${var.environment}"
+		96  |   cluster         = aws_ecs_cluster.km_ecs_cluster.id
+		97  |   task_definition = aws_ecs_task_definition.km_ecs_task.arn
+		98  |   desired_count   = 1
+		99  |   launch_type     = "FARGATE"
+		100 | 
+		101 |   load_balancer {
+		102 |     target_group_arn = var.elb_target_group_arn
+		103 |     container_name   = "km-frontend"
+		104 |     container_port   = 80
+		105 |   }
+		106 |   network_configuration {
+		107 |     assign_public_ip = true
+		108 |     subnets          = var.private_subnet
+		109 |     security_groups  = [ var.elb_sg ]
+		110 |   }
+		111 |   tags = merge(var.default_tags, {
+		112 |   })
+		113 | }
+
+Check: CKV_AWS_158: "Ensure that CloudWatch Log Group is encrypted by KMS"
+	FAILED for resource: aws_cloudwatch_log_group.km_log_group
+	File: /main.tf:115-122
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-cloudwatch-log-group-is-encrypted-by-kms
+
+		115 | resource "aws_cloudwatch_log_group" "km_log_group" {
+		116 |   name              = "km_log_group_${var.environment}"
+		117 |   retention_in_days = 1
+		118 | 
+		119 |   tags = merge(var.default_tags, {
+		120 |     Name = "km_log_group_${var.environment}"
+		121 |   })
+		122 | }
+
+Check: CKV_AWS_126: "Ensure that detailed monitoring is enabled for EC2 instances"
+	FAILED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-detailed-monitoring-is-enabled-for-ec2-instances
+
+		124 | resource "aws_instance" "km_vm"{
+		125 |   ami = data.aws_ami.ubuntu_ami.id
+		126 |   instance_type = "t2.micro"
+		127 |   vpc_security_group_ids = [ var.elb_sg ]
+		128 |   subnet_id = var.public_subnet[0]
+		129 |   tags = merge(var.default_tags, {
+		130 |     Name = "km_vm_${var.environment}"
+		131 |   })
+		132 | }
+Check: CKV_AWS_135: "Ensure that EC2 is EBS optimized"
+	FAILED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-ec2-is-ebs-optimized
+
+		124 | resource "aws_instance" "km_vm"{
+		125 |   ami = data.aws_ami.ubuntu_ami.id
+		126 |   instance_type = "t2.micro"
+		127 |   vpc_security_group_ids = [ var.elb_sg ]
+		128 |   subnet_id = var.public_subnet[0]
+		129 |   tags = merge(var.default_tags, {
+		130 |     Name = "km_vm_${var.environment}"
+		131 |   })
+		132 | }
+Check: CKV_AWS_79: "Ensure Instance Metadata Service Version 1 is not enabled"
+	FAILED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_general_31
+
+		124 | resource "aws_instance" "km_vm"{
+		125 |   ami = data.aws_ami.ubuntu_ami.id
+		126 |   instance_type = "t2.micro"
+		127 |   vpc_security_group_ids = [ var.elb_sg ]
+		128 |   subnet_id = var.public_subnet[0]
+		129 |   tags = merge(var.default_tags, {
+		130 |     Name = "km_vm_${var.environment}"
+		131 |   })
+		132 | }
+Check: CKV_AWS_8: "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+	FAILED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/general_13
+
+		124 | resource "aws_instance" "km_vm"{
+		125 |   ami = data.aws_ami.ubuntu_ami.id
+		126 |   instance_type = "t2.micro"
+		127 |   vpc_security_group_ids = [ var.elb_sg ]
+		128 |   subnet_id = var.public_subnet[0]
+		129 |   tags = merge(var.default_tags, {
+		130 |     Name = "km_vm_${var.environment}"
+		131 |   })
+		132 | }
+Check: CKV2_AWS_41: "Ensure an IAM role is attached to EC2 instance"
+	FAILED for resource: aws_instance.km_vm
+	File: /main.tf:124-132
+	Guide: https://docs.bridgecrew.io/docs/ensure-an-iam-role-is-attached-to-ec2-instance
+
+		124 | resource "aws_instance" "km_vm"{
+		125 |   ami = data.aws_ami.ubuntu_ami.id
+		126 |   instance_type = "t2.micro"
+		127 |   vpc_security_group_ids = [ var.elb_sg ]
+		128 |   subnet_id = var.public_subnet[0]
+		129 |   tags = merge(var.default_tags, {
+		130 |     Name = "km_vm_${var.environment}"
+		131 |   })
+		132 | }
+

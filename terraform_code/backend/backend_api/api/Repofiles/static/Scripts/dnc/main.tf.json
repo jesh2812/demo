@@ -1,0 +1,43 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_emr_cluster": {
+                "ser1": {
+                    "name": "cdcdcd",
+                    "release_label": "fvf",
+                    "service_role": "fcv",
+                    "master_instance_group": {
+                        "bid_price": "cvhbc",
+                        "ebs_config": "kjvh",
+                        "instance_count": "kdc",
+                        "instance_type": "fbv",
+                        "name": "jkcdb"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_emr_cluster": {
+                "sd": {
+                    "additional_info": "vcv",
+                    "configurations": {
+                        "classification": "djc",
+                        "properties": [
+                            "kj",
+                            "deh"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+]

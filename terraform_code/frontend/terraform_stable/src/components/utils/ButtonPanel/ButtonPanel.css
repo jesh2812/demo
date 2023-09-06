@@ -1,0 +1,35 @@
+.options-panel-element{
+    font-size: 30px;
+    box-shadow: 0 3px 6px 2px rgb(0 0 0 / 0.2);
+    padding: 6px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.options-panel-element{
+    transition: transform 0.2s ease-in-out;  ;
+}
+
+.options-panel-element:hover {
+    transform: scale(1.1); 
+}
+
+.action-elements-container {
+    z-index: 1 !important;
+    background-color: white;
+    position: absolute;
+    left: 100%;
+    transform: translate(-100%,-10%);
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    justify-content: end;
+    padding: 10px;
+  }
+
+  .my-form-add path {
+    font-weight: 800 !important;
+    stroke: white !important;
+    
+  }

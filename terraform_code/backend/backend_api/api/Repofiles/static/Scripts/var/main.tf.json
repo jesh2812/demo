@@ -1,0 +1,16 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_api_gateway_domain_name": {
+                "api": {}
+            }
+        }
+    }
+]

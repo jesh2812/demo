@@ -1,0 +1,22 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate": {
+                "dbm": {
+                    "certificate_authority_arn": "sj",
+                    "certificate_body": "dv",
+                    "domain_name": "hdf",
+                    "private_key": "djk",
+                    "validation_method": "ashb"
+                }
+            }
+        }
+    }
+]

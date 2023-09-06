@@ -1,0 +1,67 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_iam_policy": {
+                "ser2": {
+                    "name": "aswd",
+                    "name_prefix": "dss"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_iam_role": {
+                "ser1": {
+                    "assume_role_policy": "fff",
+                    "managed_policy_arns": "jvhgv",
+                    "name": "ajgs"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_iam_policy": {
+                "scs": {
+                    "policy": "nfn"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_iam_instance_profile": {
+                "sd": {
+                    "name": "end",
+                    "path": "jhdg"
+                }
+            }
+        }
+    },
+    {
+        "data": {
+            "aws_iam_group": {
+                "random2": {
+                    "group_name": "ebf"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate_validation": {
+                "xzx": {
+                    "certificate_arn": "jknfd"
+                }
+            }
+        }
+    }
+]

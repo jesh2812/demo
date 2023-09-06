@@ -1,0 +1,22 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_ami": {
+                "ser1": {
+                    "name": "bdn",
+                    "image_location": "kfn",
+                    "kernel_id": "jj",
+                    "device_name": "kfh",
+                    "boot_mode": "dh"
+                }
+            }
+        }
+    }
+]

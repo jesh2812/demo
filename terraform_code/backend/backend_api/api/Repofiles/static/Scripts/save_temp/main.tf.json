@@ -1,0 +1,18 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "data": {
+            "aws_acm_certificate": {
+                "cs": {
+                    "domain": "dbf"
+                }
+            }
+        }
+    }
+]

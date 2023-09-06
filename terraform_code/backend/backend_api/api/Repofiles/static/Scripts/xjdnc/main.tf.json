@@ -1,0 +1,16 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "data": {
+            "aws_acmpca_certificate_authority": {
+                "ser1": {}
+            }
+        }
+    }
+]

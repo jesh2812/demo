@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cdbff3da.css",
+    "main.js": "/static/js/main.b83b24bc.js",
+    "static/js/912.fe826087.chunk.js": "/static/js/912.fe826087.chunk.js",
+    "static/js/357.663a21fc.chunk.js": "/static/js/357.663a21fc.chunk.js",
+    "static/js/787.d2363613.chunk.js": "/static/js/787.d2363613.chunk.js",
+    "static/media/snowflakeIcon.png": "/static/media/snowflakeIcon.6c61d04b76c2792fbb37.png",
+    "static/media/modernizationNew.jpg": "/static/media/modernizationNew.77880f686fcb78acd67b.jpg",
+    "static/media/dataLineage.png": "/static/media/dataLineage.1ef3eddafe7422f58042.png",
+    "static/media/sqlParsing.png": "/static/media/sqlParsing.64b3eb63f995c0da35b3.png",
+    "static/media/azureIcon.png": "/static/media/azureIcon.c44a93660989f8fdf8fd.png",
+    "static/media/datahubIconNew.png": "/static/media/datahubIconNew.8461a0a3c29067401104.png",
+    "index.html": "/index.html",
+    "static/media/terraformNewIcon.svg": "/static/media/terraformNewIcon.a8751c2ce857682deea764133725b50a.svg",
+    "main.cdbff3da.css.map": "/static/css/main.cdbff3da.css.map",
+    "main.b83b24bc.js.map": "/static/js/main.b83b24bc.js.map",
+    "912.fe826087.chunk.js.map": "/static/js/912.fe826087.chunk.js.map",
+    "357.663a21fc.chunk.js.map": "/static/js/357.663a21fc.chunk.js.map",
+    "787.d2363613.chunk.js.map": "/static/js/787.d2363613.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdbff3da.css",
+    "static/js/main.b83b24bc.js"
+  ]
+}

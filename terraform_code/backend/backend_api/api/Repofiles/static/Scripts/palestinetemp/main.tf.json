@@ -1,0 +1,41 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_inspector_resource_group": {
+                "Inspect589": {
+                    "tags": "${var.tag}"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_athena_database": {
+                "ec569": {
+                    "bucket": "${var.bket}",
+                    "name": "${var.name updated}"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_appintegrations_event_integration": {
+                "ai895": {
+                    "eventbridge_bus": "${var.bridgebus}",
+                    "event_filter": {
+                        "source": "${var.abc}"
+                    },
+                    "name": "${var.name}"
+                }
+            }
+        }
+    }
+]

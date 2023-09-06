@@ -1,0 +1,38 @@
+[1mProject:[0m D:\changes\infracost\api\Repofiles\static\Scripts\tosend
+
+ [4mName[0m                                                       [4mMonthly Qty[0m  [4mUnit[0m                    [4mMonthly Cost[0m 
+                                                                                                              
+ [1maws_instance.ec2test[0m                                                                                         
+ [2m├─[0m Instance usage (Linux/UNIX, on-demand, t2.micro)                730  hours                          $9.05 
+ [2m├─[0m EC2 detailed monitoring                                           7  metrics                        $2.10 
+ [2m└─[0m root_block_device                                                                                         
+ [2m   └─[0m Storage (general purpose SSD, gp2)                             8  GB                             $0.91 
+                                                                                                              
+ [1maws_kms_key.mykey[0m                                                                                            
+ [2m├─[0m Customer master key                                               1  months                         $1.00 
+ [2m├─[0m Requests                                          Monthly cost depends on usage: $0.03 per 10k requests   
+ [2m├─[0m ECC GenerateDataKeyPair requests                  Monthly cost depends on usage: $0.10 per 10k requests   
+ [2m└─[0m RSA GenerateDataKeyPair requests                  Monthly cost depends on usage: $0.10 per 10k requests   
+                                                                                                              
+ [1maws_s3_bucket.s3001[0m                                                                                          
+ [2m└─[0m Standard                                                                                                  
+ [2m   ├─[0m Storage                                        Monthly cost depends on usage: $0.025 per GB            
+ [2m   ├─[0m PUT, COPY, POST, LIST requests                 Monthly cost depends on usage: $0.005 per 1k requests   
+ [2m   ├─[0m GET, SELECT, and all other requests            Monthly cost depends on usage: $0.0004 per 1k requests  
+ [2m   ├─[0m Select data scanned                            Monthly cost depends on usage: $0.0025 per GB           
+ [2m   └─[0m Select data returned                           Monthly cost depends on usage: $0.0009 per GB           
+                                                                                                              
+ [1maws_s3_bucket_lifecycle_configuration.lcon001[0m                                                                
+ [2m└─[0m Standard                                                                                                  
+ [2m   ├─[0m Storage                                        Monthly cost depends on usage: $0.025 per GB            
+ [2m   ├─[0m PUT, COPY, POST, LIST requests                 Monthly cost depends on usage: $0.005 per 1k requests   
+ [2m   ├─[0m GET, SELECT, and all other requests            Monthly cost depends on usage: $0.0004 per 1k requests  
+ [2m   ├─[0m Select data scanned                            Monthly cost depends on usage: $0.0025 per GB           
+ [2m   └─[0m Select data returned                           Monthly cost depends on usage: $0.0009 per GB           
+                                                                                                              
+[1m OVERALL TOTAL[0m                                                                                         $13.06 
+──────────────────────────────────
+13 cloud resources were detected:
+∙ 4 were estimated, 3 of which include usage-based costs, see [4mhttps://infracost.io/usage-file[0m
+∙ 6 were free, rerun with --show-skipped to see details
+∙ 3 are not supported yet, rerun with --show-skipped to see details

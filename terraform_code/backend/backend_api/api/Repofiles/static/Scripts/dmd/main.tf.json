@@ -1,0 +1,23 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate": {
+                "r": {
+                    "domain_name": "kfnn",
+                    "validation_method": "kdb",
+                    "private_key": "bf",
+                    "certificate_body": "djf",
+                    "certificate_authority_arn": "bfikd",
+			  "added":"extra"
+                }
+            }
+        }
+    }
+]

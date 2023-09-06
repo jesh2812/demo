@@ -1,0 +1,38 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate": {
+                "jk": {
+                    "domain_name": "srherhj",
+                    "validation_method": "etj",
+                    "private_key": "e5j",
+                    "certificate_body": "rdhrh",
+                    "certificate_authority_arn": "kff"
+                }
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_acm_certificate": {
+                "jkv": {}
+            }
+        }
+    },
+    {
+        "data": {
+            "aws_acm_certificate": {
+                "wet": {
+                    "domain": "rg"
+                }
+            }
+        }
+    }
+]

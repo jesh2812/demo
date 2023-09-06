@@ -1,0 +1,48 @@
+
+.add-policy-btn{
+    background-color: #576F72;
+    color: white;
+    padding: 5px;
+    align-items: center;
+    border: 1px solid #576F72;
+    border-radius: 4px;
+    
+    width: 92%;
+}
+
+.horizontal-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.label-text{
+    margin-bottom: 4px;
+    font-size: large;
+    color: black;
+}
+
+.policy-value-span{
+    background-color: var(--chakra-colors-blue-500);
+    color: white;
+    padding: 5px;
+    border: 1px solid inherit;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.label-text-2{
+    font-size:medium;
+    color: black;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.card{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 90%;
+    height: max-content;
+    border: 1px solid inherit;
+    border-radius: 4px;
+    margin:10px;
+    
+}

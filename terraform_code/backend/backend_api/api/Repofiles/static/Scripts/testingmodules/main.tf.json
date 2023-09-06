@@ -1,0 +1,23 @@
+[
+    {
+        "provider": {
+            "aws": {
+                "region": "ap-south-1"
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_backup_vault": {
+                "mod2backup": {}
+            }
+        }
+    },
+    {
+        "resource": {
+            "aws_appsync_api_cache": {
+                "Test_GM service name": {}
+            }
+        }
+    }
+]

@@ -1,0 +1,51 @@
+.custom-input {
+  position: relative;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform: translate(0px, 10px);
+  min-width: 80%;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 200px;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 0px 4px;
+}
+
+.option input{
+  flex: 1;
+  margin-top: 10px;
+}
+
+.option span{
+  flex: 9;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.checkbox {
+margin-right: 10px;
+}
+
+.select-input {
+width: 100%;
+padding: 10px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+outline: none;
+box-shadow: none;
+}
